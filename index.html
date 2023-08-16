@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello world</title>
+    <style>
+
+    * {
+        font-size: 50px;
+        font-family: sans-serif;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        image-orientation: flex;
+        left: 50%;
+        right: 50%;
+        font-family: sans-serif;
+        text-align: center;
+        
+    }
+
+    form input {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        border: none;
+        border-radius: 5px;
+        background: rgb(63, 50, 50);
+        color: rgb(255, 255, 255);
+        box-shadow: 5px 5px black;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+        background: orange;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        left: 50%;
+        right: 50%;
+        box-shadow: 3px 0px rgb(59, 7, 7);
+    }
+
+    @keyframes float {
+        from {transform: translateY(0px);}
+        to {transform: translateY(500px);}
+        
+    }
+    
+    
+    .float {
+        animation: float 1s infinite alternate;
+    }   
+
+    
+    </style>
+</head>
+<body>   
+    <form>
+        <div>
+            <input type="button" class="btn-float-circle" value="float">
+            <input type="button" class="btn-stop-circle" value="stop">
+        </div>
+    </form>
+    <div class="circle"></div>
+<script>
+    const circle = document.querySelector(".circle")
+    const btnFloatCircle = document.querySelector(".btn-float-circle")
+    const btnStopCircle = document.querySelector(".btn-stop-circle")
+
+    btnFloatCircle.addEventListener("click", () => {
+        circle.classList.add("float");
+    });
+
+    btnStopCircle.addEventListener("click", () => {
+        circle.classList.remove("float");
+    });
+
+</script>
+</body>
+</html> 
